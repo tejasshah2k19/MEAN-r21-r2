@@ -31,5 +31,5 @@ export class SignupComponent implements OnInit {
      this.userService.users.push(user);
      console.log("user => ",user)
     }
-
+ 
 }

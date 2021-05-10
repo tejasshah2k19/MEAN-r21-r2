@@ -17,4 +17,20 @@ export class UserListComponent implements OnInit {
     this.users = this.userService.users; 
   }
 
+  deleteUser(email:string){
+    console.log("delete called...",email);// c 
+
+    //a
+    //b
+    //c
+    //d
+
+    //
+
+    //
+    this.userService.users = this.userService.users.filter(u=>u.email != email)
+    console.log(this.userService.users);
+    this.users = this.userService.users; 
+  }
+
 }

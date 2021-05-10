@@ -8,7 +8,12 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list/user-list.component';
-import { MenuComponent } from './menu/menu.component'
+import { MenuComponent } from './menu/menu.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ListProductsComponent } from './list-products/list-products.component';
+import { AddStudentComponent } from './add-student/add-student.component';
+import { ListStudentComponent } from './list-student/list-student.component';
+import { EditStudentComponent } from './edit-student/edit-student.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { MenuComponent } from './menu/menu.component'
     SignupComponent,
     LoginComponent,
     UserListComponent,
-    MenuComponent
+    MenuComponent,
+    AddProductComponent,
+    ListProductsComponent,
+    AddStudentComponent,
+    ListStudentComponent,
+    EditStudentComponent
   ],
   imports: [
     BrowserModule,
