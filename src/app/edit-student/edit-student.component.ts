@@ -20,24 +20,17 @@ export class EditStudentComponent implements OnInit {
   ngOnInit(): void {
     let email = this.activatedRoute.snapshot.params.email
     console.log(email)
-    let student = this.studentService.students.filter(s => s.email == email)
-    
+    this.student = this.studentService.getStudentByEmail(email)
     // let stu = { ...this.studentService.students[this.studentService.students.indexOf(this.student)] }
     // this.student =  JSON.parse(JSON.stringify(student[0]))
     //    this.student  = stu 
     //console.log(this.studentService.students.indexOf(student[0]))
-    this.firstName = student[0].firstName
-    this.email = student[0].email
-    this.password = student[0].password
-    this.student = student[0]
+    
   }
 
   updateStudent() {
     console.log(this.firstName)
-    this.student.firstName = this.firstName
-    this.student.email = this.email
-    this.student.password = this.password
-    
+    this.studentService.updateStudent(this.student)
     this.router.navigateByUrl("/liststudent")
     
   }

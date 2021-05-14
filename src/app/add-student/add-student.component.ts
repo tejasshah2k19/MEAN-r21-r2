@@ -19,10 +19,8 @@ export class AddStudentComponent implements OnInit {
 
   addStudent(){
     console.log(this.student)
-    
-    let  student:Student= {firstName:this.student.firstName,email:this.student.email,password:this.student.email}
-    this.studentService.students.push(student)
-     this.router.navigateByUrl("/liststudent")
+    this.studentService.addStudent(this.student);  
+    this.router.navigateByUrl("/liststudent")
   }
 
 

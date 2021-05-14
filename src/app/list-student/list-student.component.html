@@ -1,6 +1,7 @@
 <h2>List Students</h2>
 
-
+<input type="text" [(ngModel)]="searchName" (keyup)="searchStudent()"  /> | <button  (click)="sortByName()">Sort By Name {{sortingType}}</button>
+<br>
 <table>
     <tr>
         <th>FirstName</th>
