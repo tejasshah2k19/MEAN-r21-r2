@@ -10,7 +10,7 @@ import { StudentService } from '../student.service';
 })
 export class AddStudentComponent implements OnInit {
 
-  student:Student= {firstName:"",email:"",password:""}
+  student:Student= {firstName:"",email:"",password:"",studentId:0,active:true}
   
   constructor(private studentService:StudentService,private router:Router) { }
 

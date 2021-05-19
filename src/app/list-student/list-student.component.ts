@@ -38,7 +38,47 @@ export class ListStudentComponent implements OnInit {
       this.sortingType = "asc"
     } 
   
-  
   }
+
+  changeStatus(studentId:number){
+    console.log(studentId);
+    //users-> 5 students 
+    //
+    let tmpStudent
+    for(let i=0;i<this.students.length;i++){
+      if(this.students[i].studentId == studentId){
+        tmpStudent = this.students[i]
+        break;
+      }
+    }
+    console.log("old")
+    console.log(tmpStudent)
+    tmpStudent.active = !tmpStudent.active
+    console.log("new")
+    console.log(tmpStudent)
+    
+  }
+
+  changeStatusWithArrowFunction(studentId:number){
+    console.log(studentId);
+    //users-> 5 students 
+    // 
+
+    let tmpStudent = this.students.filter(tmpStd=>tmpStd.studentId == studentId)[0];
+
+   // let tmpStudent = this.students.filter(tmpStd=>tmpStd.studentId == studentId)[0];
+
+    let tmpStudent2 = this.students.find(tmpStd=>tmpStd.studentId == studentId )
+    console.log(tmpStudent2)
+
+    console.log("old")
+    console.log(tmpStudent)
+    tmpStudent.active = !tmpStudent.active
+    console.log("new")
+    console.log(tmpStudent)
+    
+  }
+
+
 
 }

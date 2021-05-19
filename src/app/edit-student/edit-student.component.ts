@@ -16,7 +16,7 @@ export class EditStudentComponent implements OnInit {
   email: string = ""
   password: string = ""
   //html
-  student: Student = { firstName: "", email: "", password: "" }
+  student: Student = { studentId:0,active:true,firstName: "", email: "", password: "" }
   ngOnInit(): void {
     let email = this.activatedRoute.snapshot.params.email
     console.log(email)

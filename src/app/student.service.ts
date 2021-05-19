@@ -9,11 +9,11 @@ export class StudentService {
   students: Array<Student> = []
   constructor() {   
 
-    let s1:Student = {firstName:"tejas",email:"tejas@gmail.com",password:"12345"}
-    let s2:Student = {firstName:"jas",email:"jas@gmail.com",password:"12345"}
-    let s3:Student = {firstName:"royal",email:"royal@gmail.com",password:"12345"}
-    let s4:Student = {firstName:"shyam",email:"shyam@gmail.com",password:"12345"}
-    let s5:Student = {firstName:"narad",email:"narad@gmail.com",password:"12345"}
+    let s1:Student = {studentId:1,active:true,firstName:"tejas",email:"tejas@gmail.com",password:"12345"}
+    let s2:Student = {studentId:2,active:false,firstName:"jas",email:"jas@gmail.com",password:"12345"}
+    let s3:Student = {studentId:3,active:true,firstName:"royal",email:"royal@gmail.com",password:"12345"}
+    let s4:Student = {studentId:4,active:false,firstName:"shyam",email:"shyam@gmail.com",password:"12345"}
+    let s5:Student = {studentId:5,active:true,firstName:"narad",email:"narad@gmail.com",password:"12345"}
 
     this.students.push(s1)
     this.students.push(s2)

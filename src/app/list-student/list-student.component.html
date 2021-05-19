@@ -1,20 +1,37 @@
-<h2>List Students</h2>
+<div class="container">
+    <h2>List Students</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <input type="text" [(ngModel)]="searchName" (keyup)="searchStudent()" /> | <button
+                (click)="sortByName()">Sort By Name {{sortingType}}</button>
+            <br>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>StudentId</th>
+                    <th>FirstName</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Active</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody> 
+                <tr *ngFor="let s of students; let i=index">
+                    <td>{{s.studentId}}</td>
+                    <td>{{s.firstName}}</td>
+                    <td>{{s.email}}</td>
+                    <td>{{s.password}}</td>
+                    <td> 
+                        <button class="btn" [class.btn-success]="s.active"   [class.btn-danger]="!s.active" (click)="changeStatus(s.studentId)"   > {{s.active}}</button>
 
-<input type="text" [(ngModel)]="searchName" (keyup)="searchStudent()"  /> | <button  (click)="sortByName()">Sort By Name {{sortingType}}</button>
-<br>
-<table>
-    <tr>
-        <th>FirstName</th>
-        <th>Email</th>
-        <th>Password</th>
-        <th>Action</th>
-    </tr>
 
-    <tr *ngFor="let s of students; let i=index">
-        <td>{{s.firstName}}</td>
-        <td>{{s.email}}</td>
-        <td>{{s.password}}</td>
-        <td>  <a routerLink="/editstudent/{{s.email}}">Edit</a> |<button (click)="deleteStudent(i)" >Delete</button>  </td>
-    </tr>
-
-</table>
+                    </td>
+                    <td> <a routerLink="/editstudent/{{s.email}}">Edit</a> |<button
+                            (click)="deleteStudent(i)">Delete</button> </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
