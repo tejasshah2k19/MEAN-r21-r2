@@ -1,0 +1,30 @@
+<div class="container">
+    <h2>List Employee</h2>
+    <div class="row">
+        <div class="col-md-8">
+            <br>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>EmpId</th>
+                    <th>FirstName</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody> 
+                <tr *ngFor="let s of employees; let i=index">
+                    <td>{{s.id}}</td>
+                    <td>{{s.first_name}}</td>
+                    <td>{{s.email}}</td>
+                    <td>{{s.password}}</td>
+                    
+                    <td> <a routerLink="/editstudent/{{s.email}}">Edit</a> |<button
+                            (click)="deleteStudent(i)">Delete</button> </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

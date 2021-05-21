@@ -13,9 +13,10 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { AddStudentComponent } from './add-student/add-student.component';
 import { ListStudentComponent } from './list-student/list-student.component';
-import { EditStudentComponent } from './edit-student/edit-student.component'
-
-@NgModule({
+import { EditStudentComponent } from './edit-student/edit-student.component';
+import { ListEmployeeComponent } from './list-employee/list-employee.component';
+import { HttpClientModule } from '@angular/common/http';
+ @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
@@ -27,12 +28,14 @@ import { EditStudentComponent } from './edit-student/edit-student.component'
     ListProductsComponent,
     AddStudentComponent,
     ListStudentComponent,
-    EditStudentComponent
-  ],
+    EditStudentComponent,
+    ListEmployeeComponent   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
