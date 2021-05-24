@@ -1,5 +1,6 @@
 <div class="container">
     <h2>List Employee</h2>
+    <b> <a routerLink="/addemployee"> AddEmployee </a></b>
     <div class="row">
         <div class="col-md-8">
             <br>
@@ -21,7 +22,7 @@
                     <td>{{s.password}}</td>
                     
                     <td> <a routerLink="/editstudent/{{s.email}}">Edit</a> |<button
-                            (click)="deleteStudent(i)">Delete</button> </td>
+                            (click)="deleteEmployee(s.id)">Delete</button> </td>
                 </tr>
                 </tbody>
             </table>

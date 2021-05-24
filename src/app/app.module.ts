@@ -16,6 +16,7 @@ import { ListStudentComponent } from './list-student/list-student.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
  @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddStudentComponent,
     ListStudentComponent,
     EditStudentComponent,
-    ListEmployeeComponent   ],
+    ListEmployeeComponent,
+    AddEmployeeComponent   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
