@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 
@@ -12,7 +13,7 @@ export class EditEmployeeComponent implements OnInit {
 
   empId:number=0
   emp:Employee = {id:this.empId,first_name:"",last_name:"",email:"",password:""}
-  constructor(private route:ActivatedRoute,private empService:EmployeeService,private router:Router) { }
+  constructor(private route:ActivatedRoute,private empService:EmployeeService,private router:Router,private toaster:ToastrService) { }
 
   ngOnInit(): void {
     this.empId = this.route.snapshot.params.id ;
@@ -27,7 +28,10 @@ export class EditEmployeeComponent implements OnInit {
   }
   updateEmployee(){
     this.empService.updateEmployee(this.emp).subscribe(resp=>{
-        this.router.navigateByUrl("/listemployee")      
+      this.toaster.success("Employee Successfully updated....","",{
+        timeOut:3000
+      })      
+      this.router.navigateByUrl("/listemployee")      
   
     })
   }
