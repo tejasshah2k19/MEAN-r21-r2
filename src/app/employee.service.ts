@@ -27,4 +27,15 @@ export class EmployeeService {
     return this.httpClient.delete(url)
   }
 
+
+  getEmployeeByEmpId(empId:number):Observable<any>{
+    let url="http://restapi2020.herokuapp.com/api/users/"+empId+".json"
+    return this.httpClient.get(url)
+  }
+
+  updateEmployee(employee:any):Observable<any>{
+    let url="http://restapi2020.herokuapp.com/api/users/"+employee.id+".json"
+    return this.httpClient.put(url,employee)
+  
+  }
 }
