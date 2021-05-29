@@ -22,6 +22,13 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   saveEmployee(){
+
+    
+    //required 
+    //length 
+    //number - alphabets 
+
+
     let employee:Employee = {first_name:this.first_name,last_name:this.last_name,email:this.email,password:this.password,id:1}
       this.employeeService.saveEmployee(employee).subscribe(resp=>{
           console.log(resp)
