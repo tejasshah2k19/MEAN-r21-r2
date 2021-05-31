@@ -32,8 +32,8 @@
                             </span>
 
                             <span *ngIf="myForm.get('email').errors.email">
-                                Invalid Email Format 
-                            </span> 
+                                Invalid Email Format
+                            </span>
                         </span>
                     </span>
 
@@ -42,7 +42,33 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" class="form-control" formControlName="password" />
+                    <span *ngIf="myForm.get('password').dirty && !myForm.get('password').valid">
+                          <span *ngIf="myForm.get('password').errors.strengthError">
+                              Password must have atleast 1 digit , 1 upper , 1 lower  
+                          </span>  
+
+                    </span>
                 </div>
+
+                <div class="">
+                Gender:  
+                    Male
+                        <input type="radio"  formControlName="gender" value="male" />
+                     
+                    FeMale:
+                    <input type="radio"    formControlName="gender" value="female" />
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <select class="form-control" formControlName="city">
+                        <option value="-1" >SELECT CITY</option>
+                        <option value="ahd">Ahmedabad</option>
+                        <option value="surat">Surat</option>
+                        <option value="baroda">Baroda</option>
+                    </select>
+                </div>
+
 
                 <input type="submit" value="Save" class="btn btn-primary" />
             </form>
