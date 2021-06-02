@@ -21,6 +21,12 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AddEmployeeReactiveComponent } from './add-employee-reactive/add-employee-reactive.component';
+import { LoginFacultyComponent } from './login-faculty/login-faculty.component';
+import { SignupFacultyComponent } from './signup-faculty/signup-faculty.component';
+import { FulltimeDashboardComponent } from './fulltime-dashboard/fulltime-dashboard.component';
+import { ParttimeDashboardComponent } from './parttime-dashboard/parttime-dashboard.component';
+import { UserDataService } from './user-data.service';
+import { LogoutFacultyComponent } from './logout-faculty/logout-faculty.component';
  @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +43,12 @@ import { AddEmployeeReactiveComponent } from './add-employee-reactive/add-employ
     ListEmployeeComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
-    AddEmployeeReactiveComponent   ],
+    AddEmployeeReactiveComponent,
+    LoginFacultyComponent,
+    SignupFacultyComponent,
+    FulltimeDashboardComponent,
+    ParttimeDashboardComponent,
+    LogoutFacultyComponent   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

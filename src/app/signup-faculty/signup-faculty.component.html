@@ -1,0 +1,12 @@
+<p>signup-faculty </p>
+
+
+<form [formGroup]="myForm" (ngSubmit)="saveFaculty()">
+
+    Id: <input type="text" formControlName="facultyId"/><BR>
+    FirstName:<input type="text" formControlName="firstName"/><BR>
+    Email:<input type="text" formControlName="email"/><BR>
+    Password:<input type="text" formControlName="password"/><BR>
+    JobType:<input type="text" formControlName="jobType"/><BR>
+        <input type="submit" value="Save"/>
+</form>
