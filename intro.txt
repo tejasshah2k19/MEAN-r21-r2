@@ -1,0 +1,25 @@
+//
+
+//Angular --> consume  
+//spring boot  / rails 
+//node --> REST api 
+
+//resource ->  user 
+
+//HTTP method    url     resource
+// POST        /users     create / save / insert 
+// PUT         /users/     modify / update  { body -> userid firstname email} 
+// PUT         /users/:id     modify / update  { body ->  firstname email} 
+
+// DELETE      /users/:id                 
+// GET         /users/:id     read  / select 
+//GET           /users        read all / select  
+
+
+//400
+//401
+//200
+//
+
+
+----------------------------------
