@@ -1,9 +1,10 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
-const app = express()
 const students = require("./studentController")
 
+
+const app = express()
 
 mongoose.connect("mongodb://localhost:27017/mydb").then(()=>{
     console.log("db connected")
