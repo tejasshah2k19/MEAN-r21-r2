@@ -16,6 +16,7 @@ export class AddEmployeeReactiveComponent implements OnInit {
         last_name : new FormControl("",[Validators.required]),
         email : new FormControl("",[Validators.required,Validators.email]),
         password : new FormControl("",this.passwordChecker),
+        confirmPassword: new FormControl(""),
         gender: new FormControl(),
         city: new FormControl(-1)
     })

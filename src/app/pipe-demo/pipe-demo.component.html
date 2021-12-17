@@ -1,0 +1,62 @@
+Default : <Br>
+{{name1}}<br>
+{{name2}}<br>
+{{name3}}<br>
+<br>
+UpperCasePipe<BR>
+{{name1 | uppercase}}<br>
+{{name2 | uppercase}}<br>
+{{name3 | uppercase}}<br>
+
+<br><br>
+LoweCasePipe<br>
+{{name1| lowercase}}<br><br>
+
+{{1234 | currency}}<Br>
+{{1234.567 | currency:"INR"}}<br>
+{{1234.567 | currency:"INR":false}}
+
+<br><br>
+
+{{1234.567 }}<br>
+{{1234.567| number }}<br>
+{{1234.567| number:'4.1-1' }}<br>
+{{1234.567| number:'5.4-4' }}<br> 
+<br><br>
+
+Json Pipe <br>
+{{jsonData}}
+<br>
+{{jsonData | json}}
+<br>
+
+<br>
+
+Percentage Pipe <br>
+{{00.10 | percent }}
+<br>
+{{0.0010 | percent }}
+<br><br>
+
+Date Pipe <br>
+{{todayDate}}<br>
+{{todayDate | date }}<br>
+{{todayDate | date:'dd/MM/yyyy'}}<br>
+{{todayDate | date:'d/M/y'}}<br>
+short : {{todayDate | date:'short'}}<br>
+long : {{todayDate | date:'long'}}<br>
+medium : {{todayDate | date:'medium'}}<br>
+full : {{todayDate | date:'full'}}<br>
+<br><br>
+Slice<br>
+{{days}}<br>
+{{days | slice:3:6}}
+
+
+
+
+<br><br><br><br><br><br>
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>

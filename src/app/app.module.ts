@@ -16,7 +16,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { ListStudentComponent } from './list-student/list-student.component';
 import { EditStudentComponent } from './edit-student/edit-student.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { ToastrModule } from 'ngx-toastr';
@@ -27,6 +27,9 @@ import { FulltimeDashboardComponent } from './fulltime-dashboard/fulltime-dashbo
 import { ParttimeDashboardComponent } from './parttime-dashboard/parttime-dashboard.component';
 import { UserDataService } from './user-data.service';
 import { LogoutFacultyComponent } from './logout-faculty/logout-faculty.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { SqrPipe } from './sqr.pipe';
+import { TokenInterceptor } from './token.interceptor';
  @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +51,9 @@ import { LogoutFacultyComponent } from './logout-faculty/logout-faculty.componen
     SignupFacultyComponent,
     FulltimeDashboardComponent,
     ParttimeDashboardComponent,
-    LogoutFacultyComponent   ],
+    LogoutFacultyComponent,
+    PipeDemoComponent,
+    SqrPipe   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -59,7 +64,9 @@ import { LogoutFacultyComponent } from './logout-faculty/logout-faculty.componen
     ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

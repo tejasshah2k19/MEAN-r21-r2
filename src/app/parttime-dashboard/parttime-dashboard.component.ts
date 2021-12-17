@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service';
+import { UserDataService } from '../user-data.service';
 
 @Component({
   selector: 'app-parttime-dashboard',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParttimeDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cmService:CommonService) { }
 
   ngOnInit(): void {
+
+    
   }
 
 }

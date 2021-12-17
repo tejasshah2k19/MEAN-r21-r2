@@ -15,6 +15,8 @@ import { ListStudentComponent } from './list-student/list-student.component';
 import { LoginFacultyComponent } from './login-faculty/login-faculty.component';
 import { LogoutFacultyComponent } from './logout-faculty/logout-faculty.component';
 import { ParttimeDashboardComponent } from './parttime-dashboard/parttime-dashboard.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { PtGuardGuard } from './pt-guard.guard';
 import { SignupFacultyComponent } from './signup-faculty/signup-faculty.component';
 import { UserListComponent } from './user-list/user-list.component';
 
@@ -35,8 +37,9 @@ const routes: Routes = [
   {path:"signupfaculty",component:SignupFacultyComponent},
   {path:"loginfaculty",component:LoginFacultyComponent},
   {path:"ftfaculty",component:FulltimeDashboardComponent},
-  {path:"ptfaculty",component:ParttimeDashboardComponent},
-  {path:"logout",component:LogoutFacultyComponent}
+  {path:"ptfaculty",component:ParttimeDashboardComponent,canActivate:[PtGuardGuard]},
+  {path:"logout",component:LogoutFacultyComponent},
+  {path:"pipedemo",component:PipeDemoComponent}
 ];
 
 @NgModule({
